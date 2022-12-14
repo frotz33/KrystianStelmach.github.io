@@ -1,0 +1,275 @@
+@media (min-width: 390px) {
+  body {
+    .navigation {
+      &__button {
+        width: 25vw;
+        height: 100%;
+        padding: 0 5px;
+        font-size: 1.8rem;
+      }
+    }
+    .header {
+      &__heading {
+        padding: 0 14px;
+        font-size: 2.6rem;
+        & span {
+          font-size: 2.6rem;
+        }
+      }
+    }
+
+    .about-me {
+      padding: 20px 0;
+      &__heading {
+        font-size: 2.4rem;
+        padding: 25px 10px 10px;
+      }
+
+      &__heading3 {
+        padding: 20px 15px 0;
+        font-size: 2.2rem;
+      }
+      &__description {
+        font-size: 1.8rem;
+        padding: 20px 15px;
+      }
+    }
+    .my-projects {
+      .my-project__heading {
+        font-size: 2.4rem;
+      }
+    }
+    .footer {
+      height: 40px;
+      & .icon {
+        padding: 0 14px;
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  body {
+    .navigation {
+      position: fixed;
+      top: -80px;
+      height: 80px;
+
+      &__button {
+        font-size: 2.3rem;
+      }
+    }
+    .header {
+      &__heading {
+        padding: 0 50px;
+        font-size: 3.2rem;
+        & span {
+          font-size: 3.2rem;
+        }
+      }
+    }
+
+    .about-me {
+      padding: 20px 0;
+      text-align: center;
+      &__heading {
+        padding: 40px 10px 10px;
+        font-size: 2.8rem;
+      }
+
+      &__h3 {
+        padding: 30px 24px 0;
+        font-size: 2.4rem;
+      }
+      &__img {
+        width: 70%;
+        height: 70%;
+        margin: 0 15%;
+      }
+      &__description {
+        font-size: 2.2rem;
+        padding: 20px 15px;
+      }
+    }
+    .my-projects {
+      .my-project__heading {
+        padding: 30px 10px;
+        font-size: 2.8rem;
+      }
+      .my-project {
+        & a {
+          width: 85%;
+          height: 85%;
+        }
+      }
+    }
+    .footer {
+      height: 60px;
+      & .icon {
+        padding: 0 20px;
+        font-size: 3rem;
+        color: #fff;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    .navigation {
+      z-index: 4;
+      top: -80px;
+      height: 80px;
+      width: 100%;
+      background-color: #fff;
+      &__buttons {
+        position: relative;
+        justify-content: flex-end;
+      }
+      &__name {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+      }
+      &__button {
+        width: 15vw;
+        font-size: 2.3rem;
+        transition: 0.3s;
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+    .header {
+      &__heading {
+        padding: 0 50px;
+        font-size: 4.2rem;
+        & span {
+          font-size: 4.2rem;
+        }
+      }
+    }
+
+    .about-me {
+      &__skills-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 24px 0;
+        text-align: center;
+      }
+      &__heading {
+        padding: 60px 10px 10px;
+        font-size: 3.8rem;
+      }
+
+      &__h3 {
+        padding: 24px 16px 0;
+        font-size: 2.2rem;
+      }
+      &__description {
+        font-size: 1.7rem;
+        padding: 20px 15px;
+      }
+    }
+    .my-projects {
+      min-height: 50vh;
+      display: grid;
+      align-items: center;
+      .my-project__heading {
+        padding: 20px 10px;
+        font-size: 3.8rem;
+      }
+      &__wrap {
+        grid-template-columns: 1fr 1fr 1fr;
+        .my-project {
+          width: 100%;
+          padding: 0 20px;
+          & a {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+          }
+
+          .my-project__img {
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+
+            &:hover {
+              filter: blur(2px);
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      height: 60px;
+      & .icon {
+        padding: 0 20px;
+        font-size: 3rem;
+        transition: 0.3s;
+      }
+      a {
+        &:hover .icon {
+          color: #ccc;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1280px) {
+  body {
+    .header {
+      .header__heading {
+        padding: 0 180px;
+        font-size: 4.6rem;
+        & span {
+          font-size: 4.6rem;
+        }
+      }
+    }
+
+    .about-me {
+      padding: 24px 0;
+      &__heading {
+        width: 100%;
+        padding: 70px 10px 20px;
+        font-size: 4.2rem;
+      }
+
+      &__heading3 {
+        padding: 20px 10px 0;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+      }
+      &__img {
+        width: 85%;
+        height: 85%;
+        margin: 0 7.5%;
+      }
+      &__description {
+        font-size: 2rem;
+        padding: 20px 15px;
+      }
+    }
+    .my-projects {
+      .my-project__heading {
+        padding: 20px 10px;
+        font-size: 4.2rem;
+      }
+    }
+  }
+  .footer {
+    height: 30px;
+    background-color: #01c0ff;
+    & .icon {
+      padding: 0 10px;
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+}

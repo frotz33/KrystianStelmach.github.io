@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Roboto+Condensed:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body .navigation {
+  z-index: 4;
+  position: fixed;
+  top: -60px;
+  left: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 60px;
+  border-bottom: 2px solid #555;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+body .navigation__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 100%;
+  list-style: none;
+}
+body .navigation__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 25vw;
+  height: 100%;
+  padding: 0 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+body .navigation__name {
+  display: none;
+  font-size: 2.4rem;
+  font-family: "La Belle Aurore", cursive;
+}
+body .navigation.navigation--active {
+  top: 0;
+}
+body .header {
+  position: relative;
+  height: 100vh;
+  background: rgb(255, 75, 75);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(255, 75, 75)), to(rgb(255, 159, 70)));
+  background: linear-gradient(0deg, rgb(255, 75, 75) 0%, rgb(255, 159, 70) 100%);
+  overflow: hidden;
+}
+body .header .tk-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+body .header .blob1 {
+  z-index: 1;
+  top: 10%;
+  width: 100%;
+  left: 0;
+}
+body .header .blob2 {
+  z-index: 2;
+  top: 30%;
+  left: 40%;
+  width: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+body .header .blob3 {
+  top: 30%;
+  left: 0;
+  width: 100%;
+}
+body .header__heading {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #fff;
+  line-height: 200%;
+  font-weight: normal;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+body .header__heading span {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+body .about-me__skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+  text-align: center;
+}
+body .about-me__heading {
+  width: 100%;
+  padding: 15px 10px 10px;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+body .about-me__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body .about-me__heading3 {
+  padding: 20px 10px 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+body .about-me__img {
+  width: 85%;
+  height: 85%;
+  margin: 0 7.5%;
+}
+body .about-me__description {
+  font-size: 1.6rem;
+  padding: 20px 15px;
+}
+body .my-projects {
+  text-align: center;
+  background: rgb(255, 75, 75);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(255, 159, 70)), to(rgb(255, 75, 75)));
+  background: linear-gradient(0deg, rgb(255, 159, 70) 0%, rgb(255, 75, 75) 100%);
+}
+body .my-projects .my-project__heading {
+  padding: 20px 10px;
+  font-size: 2.2rem;
+  color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-transform: uppercase;
+}
+body .my-projects__wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+body .my-projects__wrap .my-project {
+  width: 90%;
+  height: 90%;
+}
+body .my-projects__wrap .my-project a {
+  width: 90%;
+  height: 90%;
+}
+body .my-projects__wrap .my-project__img {
+  width: 100%;
+  height: 100%;
+}
+body .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  background-color: #01c0ff;
+}
+body .footer .icon {
+  padding: 0 10px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+@media (min-width: 390px) {
+  body .navigation__button {
+    width: 25vw;
+    height: 100%;
+    padding: 0 5px;
+    font-size: 1.8rem;
+  }
+  body .header__heading {
+    padding: 0 14px;
+    font-size: 2.6rem;
+  }
+  body .header__heading span {
+    font-size: 2.6rem;
+  }
+  body .about-me {
+    padding: 20px 0;
+  }
+  body .about-me__heading {
+    font-size: 2.4rem;
+    padding: 25px 10px 10px;
+  }
+  body .about-me__heading3 {
+    padding: 20px 15px 0;
+    font-size: 2.2rem;
+  }
+  body .about-me__description {
+    font-size: 1.8rem;
+    padding: 20px 15px;
+  }
+  body .my-projects .my-project__heading {
+    font-size: 2.4rem;
+  }
+  body .footer {
+    height: 40px;
+  }
+  body .footer .icon {
+    padding: 0 14px;
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  body .navigation {
+    position: fixed;
+    top: -80px;
+    height: 80px;
+  }
+  body .navigation__button {
+    font-size: 2.3rem;
+  }
+  body .header__heading {
+    padding: 0 50px;
+    font-size: 3.2rem;
+  }
+  body .header__heading span {
+    font-size: 3.2rem;
+  }
+  body .about-me {
+    padding: 20px 0;
+    text-align: center;
+  }
+  body .about-me__heading {
+    padding: 40px 10px 10px;
+    font-size: 2.8rem;
+  }
+  body .about-me__h3 {
+    padding: 30px 24px 0;
+    font-size: 2.4rem;
+  }
+  body .about-me__img {
+    width: 70%;
+    height: 70%;
+    margin: 0 15%;
+  }
+  body .about-me__description {
+    font-size: 2.2rem;
+    padding: 20px 15px;
+  }
+  body .my-projects .my-project__heading {
+    padding: 30px 10px;
+    font-size: 2.8rem;
+  }
+  body .my-projects .my-project a {
+    width: 85%;
+    height: 85%;
+  }
+  body .footer {
+    height: 60px;
+  }
+  body .footer .icon {
+    padding: 0 20px;
+    font-size: 3rem;
+    color: #fff;
+  }
+}
+@media (min-width: 1024px) {
+  body .navigation {
+    z-index: 4;
+    top: -80px;
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+  }
+  body .navigation__buttons {
+    position: relative;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  body .navigation__name {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 15px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  body .navigation__button {
+    width: 15vw;
+    font-size: 2.3rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  body .navigation__button:hover {
+    background-color: #ddd;
+  }
+  body .header__heading {
+    padding: 0 50px;
+    font-size: 4.2rem;
+  }
+  body .header__heading span {
+    font-size: 4.2rem;
+  }
+  body .about-me__skills-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 24px 0;
+    text-align: center;
+  }
+  body .about-me__heading {
+    padding: 60px 10px 10px;
+    font-size: 3.8rem;
+  }
+  body .about-me__h3 {
+    padding: 24px 16px 0;
+    font-size: 2.2rem;
+  }
+  body .about-me__description {
+    font-size: 1.7rem;
+    padding: 20px 15px;
+  }
+  body .my-projects {
+    min-height: 50vh;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .my-projects .my-project__heading {
+    padding: 20px 10px;
+    font-size: 3.8rem;
+  }
+  body .my-projects__wrap {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  body .my-projects__wrap .my-project {
+    width: 100%;
+    padding: 0 20px;
+  }
+  body .my-projects__wrap .my-project a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  body .my-projects__wrap .my-project .my-project__img {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  body .my-projects__wrap .my-project .my-project__img:hover {
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  body .footer {
+    height: 60px;
+  }
+  body .footer .icon {
+    padding: 0 20px;
+    font-size: 3rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  body .footer a:hover .icon {
+    color: #ccc;
+  }
+}
+@media (min-width: 1280px) {
+  body .header .header__heading {
+    padding: 0 180px;
+    font-size: 4.6rem;
+  }
+  body .header .header__heading span {
+    font-size: 4.6rem;
+  }
+  body .about-me {
+    padding: 24px 0;
+  }
+  body .about-me__heading {
+    width: 100%;
+    padding: 70px 10px 20px;
+    font-size: 4.2rem;
+  }
+  body .about-me__heading3 {
+    padding: 20px 10px 0;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+  }
+  body .about-me__img {
+    width: 85%;
+    height: 85%;
+    margin: 0 7.5%;
+  }
+  body .about-me__description {
+    font-size: 2rem;
+    padding: 20px 15px;
+  }
+  body .my-projects .my-project__heading {
+    padding: 20px 10px;
+    font-size: 4.2rem;
+  }
+  .footer {
+    height: 30px;
+    background-color: #01c0ff;
+  }
+  .footer .icon {
+    padding: 0 10px;
+    font-size: 2rem;
+    color: #fff;
+  }
+}/*# sourceMappingURL=style.css.map */
