@@ -1,11 +1,12 @@
-const navigation = document.querySelector('.navigation');
+const initOnClickHandler = () => {
+  const highlightActiveProduct = (e) => {
+    e.currentTarget.classList.toggle('shop__product--active');
+    console.log(e.currentTarget.classList);
+  };
 
-const scrollWebsite = () => {
-  if (window.scrollY >= 100) {
-    navigation.classList.add('navigation--active');
-    return;
-  }
-  navigation.classList.remove('navigation--active');
+  const shopProducts = document.querySelectorAll('.shop__product');
+  shopProducts.forEach((shopProduct) => {
+    shopProduct.addEventListener('click', highlightActiveProduct);
+  });
 };
-
-window.addEventListener('scroll', scrollWebsite);
+initOnClickHandler();
