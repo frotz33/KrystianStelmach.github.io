@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffdbbc), to(#ffea7f));
+  background: linear-gradient(180deg, #ffdbbc 0%, #ffea7f 100%);
+}
+body .shop {
+  display: grid;
+  grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  gap: 30px;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 25px 0 25px;
+  font-family: "Montserrat", sans-serif;
+}
+body .shop .shop__product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  height: 320px;
+  border-radius: 20px;
+  background-color: #8dadff;
+  border: 3px solid transparent;
+}
+body .shop .shop__product .shop__photo {
+  width: 210px;
+  height: 210px;
+  margin: 20px 0 15px;
+  border-radius: 20px;
+}
+body .shop .shop__product .shop__name,
+body .shop .shop__product .shop__price {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-style: italic;
+}
+body .shop .shop__product .shop__price {
+  font-size: 1.4rem;
+  color: #133268;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  /* padding-bottom: 40px; */
+  text-align: center;
+  margin-top: 20px;
+  /* jak przysunąć cenę do nazwy przedmiotu, ale i tak imo lepiej tak jak u mnie */
+}
+body .shop .shop__product:nth-last-child(1) .shop__name, body .shop .shop__product:nth-last-child(2) .shop__name, body .shop .shop__product:nth-last-child(1) .shop__price, body .shop .shop__product:nth-last-child(2) .shop__price {
+  color: gray;
+}
+body .shop .shop__product--active {
+  /* ???????????? */
+  -webkit-transition: 0;
+  transition: 0;
+  border: 3px solid #002586;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    /* max-height: 1280px; */
+  }
+  body .shop {
+    grid-template-columns: 1fr 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    max-width: 1024px;
+    padding: 0 110px;
+  }
+  body .shop .shop__product {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  body .shop .shop__product:hover {
+    -webkit-transform: scale(110%);
+            transform: scale(110%);
+  }
+}
+@media (min-height: 1081px) and (orientation: landscape) {
+  body {
+    min-height: 100vh;
+  }
+  body .shop {
+    min-height: auto;
+    max-height: 1080px;
+  }
+}/*# sourceMappingURL=style.css.map */
