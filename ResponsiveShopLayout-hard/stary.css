@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+body {
+  background: linear-gradient(180deg, #ffdbbc 0%, #ffea7f 100%);
+}
+.shop {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  gap: 30px;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 25px 0 25px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.shop__product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 320px;
+  border-radius: 20px;
+  background-color: #8dadff;
+}
+.shop__name,
+.shop__price {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-style: italic;
+}
+.shop__price {
+  font-size: 1.4rem;
+  color: #133268;
+  flex-basis: 100%;
+  /* padding-bottom: 40px; */
+  text-align: center;
+  margin-top: 20px;
+  /* jak przysunąć cenę do nazwy przedmiotu, ale i tak imo lepiej tak jak u mnie */
+}
+.shop__photo {
+  width: 210px;
+  height: 210px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+@media (min-width: 390px) {
+  .shop__product {
+    width: 260px;
+    height: 340px;
+  }
+  .shop__name,
+  .shop__price {
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .shop__price {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    /* max-height: 1280px; */
+  }
+  .shop {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    max-width: 1024px;
+    padding: 0 110px;
+  }
+  .shop__product {
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .shop__product:hover {
+    transform: scale(110%);
+  }
+  .shop__product--active {
+    /* ???????????? */
+    transition: 0;
+    border: 3px solid #002586;
+  }
+}
+@media (min-height: 1081px) and (orientation: landscape) {
+  body {
+    min-height: 100vh;
+  }
+  .shop {
+    min-height: auto;
+    max-height: 1080px;
+  }
+}

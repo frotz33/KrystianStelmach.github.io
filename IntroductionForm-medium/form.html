@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ankieta kontaktowa</title>
+  </head>
+  <body>
+    <form action="" class="contact-form">
+      <!-- fieltset -->
+      <fieldset class="contact-form__fieldset">
+        <legend class="contact-form__legend">
+          Dlaczego pchasz się do IT? *
+        </legend>
+
+        <!-- name i value checkbox i radio -->
+        <!-- name=value -->
+        <input
+          type="checkbox"
+          class="contact-form__checkbox"
+          name="why-joining"
+          value="not-happy-with-job"
+          id="not-happy-with-job"
+        /><label for="not-happy-with-job">Aktualna praca mnie nie cieszy</label>
+        <input
+          type="checkbox"
+          class="contact-form__checkbox"
+          name="why-joining"
+          value="kid-coding"
+          id="kid-coding"
+        /><label for="kid-coding">Za dzieciaka kodowałem</label>
+        <input
+          type="checkbox"
+          class="contact-form__checkbox"
+          name="why-joining"
+          value="already-programmer"
+          id="already-programmer"
+        /><label for="already-programmer">Jestem już programistą</label>
+        <input
+          type="checkbox"
+          class="contact-form__checkbox"
+          name="why-joining"
+          value="like-computers"
+          id="like-computers"
+        /><label for="like-computers">Lubię komputery</label>
+      </fieldset>
+      <fieldset class="contact-form__fieldset">
+        <legend class="contact-form__legend">
+          Czy uczyłeś/aś się kodować wcześniej? *
+        </legend>
+        <input
+          type="radio"
+          class="contact-form__checkbox"
+          name="coding-before"
+          value="by-myself"
+          id="by-myself"
+        /><label for="by-myself">Samodzielnie</label>
+        <input
+          type="radio"
+          class="contact-form__checkbox"
+          name="coding-before"
+          value="bootcamp"
+          id="bootcamp"
+        /><label for="bootcamp"> Bootcamp</label>
+        <input
+          type="radio"
+          class="contact-form__checkbox"
+          name="coding-before"
+          value="college"
+          id="college"
+        /><label for="college">Studia</label>
+        <input
+          type="radio"
+          class="contact-form__checkbox"
+          name="coding-before"
+          value="never"
+          id="never"
+        /><label for="never">Nie</label>
+      </fieldset>
+      <fieldset class="contact-form__fieldset">
+        <legend class="contact-form__legend contact-form__legend--center">
+          Opisz w 3 zdaniach wrażenia z nauki w innym miejscu.
+        </legend>
+        <textarea class="contact-form__textarea" cols="50" rows="10"></textarea>
+      </fieldset>
+      <fieldset class="contact-form__fieldset">
+        <legend class="contact-form__legend">
+          Jaki jest Twój cel zwiazany z nauką? *
+        </legend>
+        <!-- select name -->
+        <select name="their-goal" class="contact-form__select">
+          <option
+            value=""
+            class="contact-form__option-hidden"
+            disabled
+            selected
+            hidden
+          >
+            Wybierz odpowiedź z listy
+          </option>
+          <option value="change-job">Zmienić pracę</option>
+          <option value="better-job">Lepsza praca</option>
+          <option value="technology">Rozwój technologii</option>
+          <option value="portfolio">Portfolio</option>
+        </select>
+      </fieldset>
+      <fieldset class="contact-form__fieldset">
+        <legend class="contact-form__legend">
+          Jaka ma być Twoja specjalizacja? *
+        </legend>
+        <select name="specialization" class="contact-form__select">
+          <option
+            value=""
+            class="contact-form__option-hidden"
+            disabled
+            selected
+            hidden
+          >
+            Wybierz odpowiedź z listy
+          </option>
+          <option value="front-js">Frontend JS</option>
+          <option value="back-js">Backend JS</option>
+          <option value="solidity">Solidity</option>
+          <option value="python">Python</option>
+        </select>
+      </fieldset>
+      <fieldset class="contact-form__fieldset">
+        <legend class="contact-form__legend">
+          Ile godzin tygodniowo możesz poświęcić na naukę? *
+        </legend>
+        <!-- walidacja -->
+        <input
+          type="number"
+          min="1"
+          max="168"
+          class="contact-form__number-input"
+        />
+      </fieldset>
+      <fieldset class="contact-form__fieldset">
+        <legend class="contact-form__legend">
+          Zaznacz na kalendarzu, kiedy chciałbyś zacząć naukę: *
+        </legend>
+        <section class="contact-form__calendar-wrap">
+          <header class="contact-form__calendar-header">
+            <p class="contact-form__calendar-month">Maj 2022</p>
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+          </header>
+          <div class="contact-form__calendar">
+            <ul class="contact-form__calendar-days">
+              <li class="contact-form__calendar-day">Mo</li>
+              <li class="contact-form__calendar-day">Tu</li>
+              <li class="contact-form__calendar-day">We</li>
+              <li class="contact-form__calendar-day">Th</li>
+              <li class="contact-form__calendar-day">Fr</li>
+              <li class="contact-form__calendar-day">Sa</li>
+              <li class="contact-form__calendar-day">Su</li>
+            </ul>
+            <ul class="contact-form__calendar-dates">
+              <li class="contact-form__calendar-date">28</li>
+              <li class="contact-form__calendar-date">29</li>
+              <li class="contact-form__calendar-date">30</li>
+              <li class="contact-form__calendar-date">1</li>
+              <li class="contact-form__calendar-date">2</li>
+              <li class="contact-form__calendar-date">3</li>
+              <li class="contact-form__calendar-date">4</li>
+              <li class="contact-form__calendar-date">5</li>
+              <li class="contact-form__calendar-date">6</li>
+              <li class="contact-form__calendar-date">7</li>
+              <li class="contact-form__calendar-date">8</li>
+              <li class="contact-form__calendar-date">9</li>
+              <li class="contact-form__calendar-date">10</li>
+              <li class="contact-form__calendar-date">11</li>
+              <li class="contact-form__calendar-date">12</li>
+              <li class="contact-form__calendar-date">13</li>
+              <li class="contact-form__calendar-date">14</li>
+              <li class="contact-form__calendar-date">15</li>
+              <li class="contact-form__calendar-date">16</li>
+              <li class="contact-form__calendar-date">17</li>
+              <li class="contact-form__calendar-date">18</li>
+              <li class="contact-form__calendar-date">19</li>
+              <li class="contact-form__calendar-date">20</li>
+              <li class="contact-form__calendar-date">21</li>
+              <li class="contact-form__calendar-date">22</li>
+              <li class="contact-form__calendar-date">23</li>
+              <li class="contact-form__calendar-date">24</li>
+              <li class="contact-form__calendar-date">25</li>
+              <li class="contact-form__calendar-date">26</li>
+              <li class="contact-form__calendar-date">27</li>
+              <li class="contact-form__calendar-date">28</li>
+              <li class="contact-form__calendar-date">29</li>
+              <li class="contact-form__calendar-date">30</li>
+              <li class="contact-form__calendar-date">1</li>
+              <li class="contact-form__calendar-date">2</li>
+            </ul>
+          </div>
+        </section>
+      </fieldset>
+      <fieldset class="contact-form__fieldset">
+        <legend class="contact-form__legend">Twój numer telefonu. *</legend>
+        <input
+          type="tel"
+          pattern="[0-9]{9}"
+          placeholder="601102203"
+          class="contact-form__touch"
+        />
+      </fieldset>
+      <fieldset class="contact-form__fieldset">
+        <legend class="contact-form__legend">Twój adres email. *</legend>
+        <input
+          type="email"
+          class="contact-form__touch"
+          placeholder="email@gmail"
+          required
+        />
+      </fieldset>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>
